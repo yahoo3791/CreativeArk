@@ -1,0 +1,11 @@
+$number: (
+    0: 0,
+    25: 25,
+    50: 50,
+    75: 75,
+);
+@each $key, $val in $number {
+    .opacity-#{$key} {
+        opacity: $val
+    }
+}
