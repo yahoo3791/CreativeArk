@@ -84,10 +84,6 @@ main {
         }
     }
     #pricing-plan {
-        margin: 0 5em;
-        @media (max-width: 991.98px) {
-            margin: 0 2em;
-        }
         .pricing-block {
             display: block;
             position: relative;
@@ -197,7 +193,7 @@ main {
                         margin: 1em .5em;
                         color: var(--bs-primary);
                         border: 3px solid var(--bs-primary);
-                        border-radius: 5%;
+                        border-radius: 15px;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -225,6 +221,7 @@ main {
                         }
                         p {
                             margin-bottom: 1rem;
+                            text-align: justify;
                         }
                     }
                 }
@@ -242,7 +239,7 @@ main {
         display: block;
         bottom: 0;
         left: 0;
-        width: 4em;
+        width: 0em; //4
         height: .1em;
         border-radius: 15px;
         background-color: var(--bs-primary);
@@ -252,5 +249,17 @@ main {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+    }
+    &.aos {
+    &::after {
+        width: 0;
+        transition: ease-in-out 1s;
+        }
+    }
+
+    &.aos.ed {
+        &::after {
+            width: 4em;
+        }
     }
 }

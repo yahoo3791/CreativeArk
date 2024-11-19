@@ -4,6 +4,7 @@ header {
         width: 16.7%;
         max-width: 200px;
         padding-bottom: 0.25%;
+        transition: all .5s;
         @media (max-width: 1199.98px) {
             min-width: 180px;
         }
@@ -14,8 +15,7 @@ header {
     .navber-collapse {
         width: 83%;
     }
-    .nav-link-end {
-        padding: 1rem 1.5rem;
+    .nav-link-end { 
         a {
             color: var(--bs-primary);
             display: inline-block;
@@ -46,6 +46,11 @@ header {
                 transform: translateY(-50%);
             }
         }
+        a:first-child {
+            @media (max-width: 991.98px) {
+                margin-left: 1.5rem;
+            }
+        }
         a:last-child {
             margin-right: 0;
         }
@@ -54,19 +59,6 @@ header {
         background: white;
         padding: 1%;
         box-shadow: 1px 2px 3px 0px #A19F9F;
-    }
-}
-
-.add-fixed {
-    position: fixed;
-    .logo {
-        max-width: 180px;
-        @media (max-width: 1199.98px) {
-            min-width: 160px;
-        }
-        @media (max-width: 767.98px) {
-            min-width: 140px;
-        }
     }
 }
 

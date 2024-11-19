@@ -3849,7 +3849,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover, .nav-link:focus, .nav-link.active {
   color: var(--bs-success);
   background-color: var(--bs-secondary);
 }
@@ -4051,10 +4051,14 @@ textarea.form-control-lg {
   line-height: 1;
   color: var(--bs-navbar-color);
   background-color: transparent;
-  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-  border-radius: var(--bs-navbar-toggler-border-radius);
+  border: none;
   transition: var(--bs-navbar-toggler-transition);
 }
+.navbar-toggler i {
+  color: var(--bs-primary);
+  font-size: 2em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     transition: none;
@@ -4066,7 +4070,7 @@ textarea.form-control-lg {
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
-  box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+  // box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
 }
 
 .navbar-toggler-icon {

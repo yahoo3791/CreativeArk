@@ -22,27 +22,27 @@
         您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態
     </noscript>
     <!-- 導覽列 -->
-    <header id="header" class="navbar navbar-expand-lg bg-white z-3">
+    <header id="header" class="navbar navbar-expand-lg sticky-top bg-white">
         <a class="accesskey opacity-0 position-absolute top-0 start-0" href="#content" title="跳到主要內容區">跳到主要內容區</a>
         <div class="container-fluid">
             <a class="logo" href="index.html" title="創意方舟 CREATIVE ARK">
                 <h1>
-                    <img src="./images/logo.png" class="img-fluid" alt="創意方舟 CREATIVE ARK">
+                    <img src="./images/logo.png" class="img-fluid d-block" alt="創意方舟 CREATIVE ARK">
                 </h1>
             </a>
             <a class="accesskey" href="javascript:;" title="上方選單區" accesskey="U">:::</a>
             <button class="navbar-toggler" title="導覽列" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list fs-1"></i>
+                <i class="bi bi-list"></i>
                 <span class="sr-only">導覽列</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" title="首頁">首頁</a>
+                        <a class="nav-link" aria-current="page" href="index.html" title="首頁">首頁</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:;" title="關於我們">關於我們</a>
+                        <a class="nav-link" href="index.html#about" title="關於我們">關於我們</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button"
@@ -50,19 +50,18 @@
                             方案介紹
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#" title="網站設計與開發">網站設計與開發</a></li>
-                            <li><a class="dropdown-item" href="#" title="電子商務網站設計">電子商務網站設計</a></li>
-                            <li><a class="dropdown-item" href="#" title="網站維護與更新">網站維護與更新</a></li>
-                            <li><a class="dropdown-item" href="#" title="搜尋引擎優化 (SEO)">搜尋引擎優化 (SEO)</a></li>
-                            <li><a class="dropdown-item" href="#" title="數位行銷與品牌塑造">數位行銷與品牌塑造</a></li>
-                            <li><a class="dropdown-item" href="#" title="分析與數據報告">分析與數據報告</a></li>
+                            <li><a class="dropdown-item" href="web-design.html" title="網站設計與開發">網站設計與開發</a></li>
+                            <li><a class="dropdown-item" href="e-commerce.html" title="電子商務網站設計">電子商務網站設計</a></li>
+                            <li><a class="dropdown-item" href="website-update.html" title="網站維護與更新">網站維護與更新</a></li>
+                            <li><a class="dropdown-item" href="seo.html" title="搜尋引擎優化 (SEO)">搜尋引擎優化 (SEO)</a></li>
+                            <li><a class="dropdown-item" href="analyze.html" title="分析與數據報告">分析與數據報告</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:;" aria-disabled="true" title="聯絡我們">聯絡我們</a>
+                        <a class="nav-link" href="index.html#contact-us" aria-disabled="true" title="聯絡我們">聯絡我們</a>
                     </li>
                 </ul>
-                <div class="nav-link-end d-inline-block">
+                <div class="nav-link-end">
                     <a href="javascript:;" class="font-btn" title="縮小字體" data-fontsize="0" data-event="reduce">
                         A<i class="bi bi-dash"></i>
                         <span class="sr-only">縮小字體</span>
@@ -78,7 +77,7 @@
                 </div>
                 <!-- 搜尋浮動 -->
                  <div class="search-bar position-absolute top-100 end-0" style="display: none">
-                     <form class="d-flex">
+                     <form class="d-flex" action="" method="get">
                          <label for="keyword" class="sr-only">關鍵字</label>
                          <input id="keyword" name="keyword" class="form-control me-2" type="search" placeholder="關鍵字查詢" aria-label="關鍵字查詢" title="關鍵字查詢">
                          <button class="btn btn-outline-primary" type="submit" title="搜尋">
@@ -106,28 +105,21 @@
         <div id="about" class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-11 col-lg-6">
-                    <div class="about-img"
-                        data-aos="fade-left"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500">
+                    <div class="about-img">
                         <img src="images/about.png" alt>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-txt z-2 p-5"
-                        data-aos="fade-right"
-                        data-aos-offset="300"
-                        data-aos-easing="ease-in-sine">
-                        <h3 class="h3-tit">關於我們 ABOUT US</h3>
+                    <div class="about-txt z-2 p-5">
+                        <h3 class="h3-tit aos">關於我們 ABOUT US</h3>
                         <p class="info">在數位時代，網站是品牌與用戶之間的橋樑，而我們的使命就是將這座橋建得美觀而實用。我們是一家充滿創新精神的網頁設計公司，匯聚了設計師、開發人員與數位行銷專家，致力於為每位客戶創造具有高度吸引力、功能完善的網站體驗。</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 方案介紹 -->
-        <div id="pricing-plan" class="container-fulid position-relative">
-            <h3 class="h3-tit" data-aos="fade-up">方案介紹 PRICING PLAN</h3>
+        <div id="pricing-plan" class="container position-relative">
+            <h3 class="h3-tit aos">方案介紹 PRICING PLAN</h3>
             <swiper-container
                 init="false"
                 class="mySwiper"
@@ -139,31 +131,31 @@
                 autoplay-delay="2500"
                 >
                     <swiper-slide>
-                        <a href="javascript:;" class="pricing-block" title="網站設計與開發">
+                        <a href="web-design.html" class="pricing-block" title="網站設計與開發">
                             <img src="images/web-design.png" alt>
                             <h4 class="fs-4">網站設計與開發</h4>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="javascript:;" class="pricing-block" title="電子商務網站設計">
+                        <a href="e-commerce.html" class="pricing-block" title="電子商務網站設計">
                             <img src="images/e-commerce.png" alt>
                             <h4 class="fs-4">電子商務網站設計</h4>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="javascript:;" class="pricing-block" title="網站維護與更新">
+                        <a href="website-update.html" class="pricing-block" title="網站維護與更新">
                             <img src="images/website-update.png" alt>
                             <h4 class="fs-4">網站維護與更新</h4>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="javascript:;" class="pricing-block" title="搜尋引擎優化 (SEO)">
+                        <a href="seo.html" class="pricing-block" title="搜尋引擎優化 (SEO)">
                             <img src="images/seo.png" alt>
                             <h4 class="fs-4">搜尋引擎優化 (SEO)</h4>
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="javascript:;" class="pricing-block" title="分析與數據報告">
+                        <a href="analyze.html" class="pricing-block" title="分析與數據報告">
                             <img src="images/analyze.png" alt>
                             <h4 class="fs-4">分析與數據報告</h4>
                         </a>
@@ -172,7 +164,7 @@
         </div>
         <!-- 聯絡我們 (表單、地理位置 ) -->
         <div id="contact-us" class="container">
-            <h3 class="h3-tit center">聯絡我們 CONTACT US</h3>
+            <h3 class="h3-tit aos center">聯絡我們 CONTACT US</h3>
             <div class="contact-tab">
                 <a href="javascript:;" class="contact-btn active" title="線上留言" data-tab="reserve-list">
                     <h4 class="fs-4">線上留言</h4>
@@ -197,7 +189,7 @@
                         <textarea type="txt" id="txt" name="txt" placeholder="請輸入留言"
                         class="form-control mb-3" rows="6" cols="40" required title="請輸入留言"></textarea>
                     </fieldset>
-                    <button class="btn btn-outline-primary" type="button" title="送出">
+                    <button class="btn btn-outline-primary" type="submit" title="送出">
                         送出
                     </button>
                 </form>
@@ -212,19 +204,19 @@
                         </div>
                         <div class="address">
                             <div class="d-flex justify-content-around justify-content-sm-between flex-wrap flex-lg-nowrap">
-                                <a href="javascirpt:;" class="address-btn active" title="自行開車" data-method="driving">
+                                <a href="javascript:;" class="address-btn active" title="自行開車" data-method="driving">
                                     <i class="bi bi-car-front-fill fs-1"></i>
                                     <h5>自行開車</h5>
                                 </a>
-                                <a href="javascirpt:;" class="address-btn" title="公車/客運" data-method="bus">
+                                <a href="javascript:;" class="address-btn" title="公車/客運" data-method="bus">
                                     <i class="bi bi-bus-front-fill fs-1"></i>
                                     <h5>公車/客運</h5>
                                 </a>
-                                <a href="javascirpt:;" class="address-btn" title="周邊巴士&接駁車" data-method="shuttle-bus">
+                                <a href="javascript:;" class="address-btn" title="周邊巴士&接駁車" data-method="shuttle-bus">
                                     <i class="bi bi-person-video3 fs-1"></i>
                                     <h5>周邊巴士&接駁車</h5>
                                 </a>
-                                <a href="javascirpt:;" class="address-btn" title="機場捷運" data-method="air-mrt">
+                                <a href="javascript:;" class="address-btn" title="機場捷運" data-method="air-mrt">
                                     <i class="bi bi-bus-front-fill fs-1"></i>
                                     <h5>機場捷運</h5>
                                 </a>
@@ -253,8 +245,8 @@
                                 <div class="methods air-mrt" style="display: none;">
                                     <h6><strong>桃園機場捷運</strong></h6>
                                     <p>於「捷運坑口站」下車→搭乘計程車或騎乘Ubike前往貨運站。</p>
-                                    <p>※　搭乘計程車：於「貨運站入口」下車 → 步行約1分鐘進入園區 → 外牆有A、B、C標示之建物即為貨運站。</p>
-                                    <p>※　騎乘Ubike：約6分鐘至「遠雄自貿港區加值園區站」還車 → 步行航翔路約20分鐘進入園區 → 外牆有A、B、C標示之建物即為貨運站。</p>
+                                    <p>※搭乘計程車：於「貨運站入口」下車 → 步行約1分鐘進入園區 → 外牆有A、B、C標示之建物即為貨運站。</p>
+                                    <p>※騎乘Ubike：約6分鐘至「遠雄自貿港區加值園區站」還車 → 步行航翔路約20分鐘進入園區 → 外牆有A、B、C標示之建物即為貨運站。</p>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +266,7 @@
             <div class="row">
                 <div class="col-xl-6 col-md-6">
                     <ul class="h-100 d-flex flex-column justify-content-between">
-                        <li><i class="bi bi-telephone"></i> 電話：<a href="tel:+886-6-666-666" title="撥打創意方舟電話">02-2575-1777</a></li>
+                        <li><i class="bi bi-telephone"></i> 電話：<a href="tel:02-2575-1777" title="撥打創意方舟電話">02-2575-1777</a></li>
                         <li><i class="bi bi-reply"></i> 傳真：02-2767-3625</li>
                         <li><i class="bi bi-buildings"></i> 地址：<a href="https://www.google.com/maps?ll=25.097952,121.254883&z=12&t=m&hl=zh-TW&gl=TW&mapclient=embed&cid=3409415905342313128"
                             title="導航至創意方舟(另開新視窗)" target="_blank" rel="noopener noreferrer">33747桃園市大園區航翔路101號</a></li>
@@ -283,8 +275,8 @@
                 </div>
                 <div class="col-xl-6 col-md-6 text-center">
                     <img class="d-block mx-auto mt-3 mt-md-0" src="images/logo.jpg" alt="創意方舟logo">
-                    <a href="javascript:;" title="隱私權保護政策">隱私權保護政策</a>｜
-                    <a href="javascript:;" title="網站安全政策">網站安全政策</a>
+                    <a href="privacy.html" title="隱私權保護政策">隱私權保護政策</a>｜
+                    <a href="security.html" title="網站安全政策">網站安全政策</a>
                 </div>
             </div>
         </div>
@@ -296,5 +288,63 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="javascript/swiper.js"></script>
     <script src="javascript/all.js"></script>
+    <script>
+        AOS.init();
+
+        let typed = new Typed('.banner-title', {
+            strings: ['一站式網頁設計，助您跨足線上', '「無論是企業品牌官網還是電子商務平台，我們的專業團隊能夠提供量身訂製的設計和技術解決方案，助您輕鬆掌握線上市場。」'],
+            typeSpeed: 100,
+            showCursor: false,
+        });
+
+        $(".contact-btn").on('click keydown', function (e) {
+            if (e.type == "keydown" && e.originalEvent.key !== "Enter") {
+                return;
+            } else {
+                $(".contact-btn").each(function () {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+                let elshow = $(this)[0].dataset.tab;
+                $(".tabs").each(function () {
+                    $(this).hide();
+                });
+                $("." + elshow).show();
+            }
+        });
+
+        $(".address-btn").on('click keydown', function (e) {
+            if (e.type == "keydown" && e.originalEvent.key !== "Enter") {
+                return;
+            } else {
+                $(".address-btn").each(function () {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+                let elshow = $(this)[0].dataset.method;
+                $(".methods").each(function () {
+                    $(this).hide();
+                });
+                $("." + elshow).show();
+
+            }
+        });
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.bottom < 0 || rect.top > window.innerHeight;
+        }
+
+        function addClassToVisibleElements() {
+            var aosElements = document.querySelectorAll(".aos");
+            aosElements.forEach(function (aosElement) {
+                if (!isElementInViewport(aosElement)) aosElement.classList.add("ed");
+                else aosElement.classList.remove("ed");
+            });
+        }
+
+        document.addEventListener("scroll", addClassToVisibleElements);
+        addClassToVisibleElements();
+    </script>
 </body>
 </html>
