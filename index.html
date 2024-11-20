@@ -304,38 +304,37 @@
             showCursor: false,
         });
 
-        $(".contact-btn").on('click keydown', function (e) {
-            if (e.type == "keydown" && e.originalEvent.key !== "Enter") {
-                return;
-            } else {
-                $(".contact-btn").each(function () {
-                    $(this).removeClass("active");
+        function createTabSwitcher(buttonSelector, activeClass, dataAttribute, targetSelector) {
+            $(buttonSelector).on('click keydown', function (e) {
+                // 若是 keydown 事件，僅當按下 Enter 鍵時處理
+                if (e.type === "keydown" && e.originalEvent.key !== "Enter") {
+                    return;
+                }
+
+                // 移除所有按鈕的活動狀態
+                $(buttonSelector).each(function () {
+                    $(this).removeClass(activeClass);
                 });
-                $(this).addClass("active");
-                let elshow = $(this)[0].dataset.tab;
-                $(".tabs").each(function () {
+
+                // 為當前按鈕添加活動狀態
+                $(this).addClass(activeClass);
+
+                // 根據數據屬性名稱找到對應的顯示元素
+                let elshow = $(this).data(dataAttribute);
+
+                // 隱藏所有目標內容
+                $(targetSelector).each(function () {
                     $(this).hide();
                 });
-                $("." + elshow).show();
-            }
-        });
 
-        $(".address-btn").on('click keydown', function (e) {
-            if (e.type == "keydown" && e.originalEvent.key !== "Enter") {
-                return;
-            } else {
-                $(".address-btn").each(function () {
-                    $(this).removeClass("active");
-                });
-                $(this).addClass("active");
-                let elshow = $(this)[0].dataset.method;
-                $(".methods").each(function () {
-                    $(this).hide();
-                });
+                // 顯示對應的目標內容
                 $("." + elshow).show();
+            });
+        }
 
-            }
-        });
+        // 初始化功能
+        createTabSwitcher(".contact-btn", "active", "tab", ".tabs");
+        createTabSwitcher(".address-btn", "active", "method", ".methods");
 
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
